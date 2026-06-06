@@ -66,6 +66,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Fullscreen logic
+    const fsBtn = document.getElementById('fullscreenBtn');
+    const fsIconExpand = document.getElementById('fsIconExpand');
+    const fsIconCompress = document.getElementById('fsIconCompress');
+    const fsText = document.getElementById('fsText');
+
+    if (fsBtn) {
+        fsBtn.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log(`Error al intentar modo pantalla completa: ${err.message}`);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        });
+
+        document.addEventListener('fullscreenchange', () => {
+            if (document.fullscreenElement) {
+                fsIconExpand.style.display = 'none';
+                fsIconCompress.style.display = 'block';
+                fsText.textContent = 'Reducir';
+            } else {
+                fsIconExpand.style.display = 'block';
+                fsIconCompress.style.display = 'none';
+                fsText.textContent = 'Ampliar';
+            }
+        });
+    }
+
     // Initialize
     updateSlides();
 });

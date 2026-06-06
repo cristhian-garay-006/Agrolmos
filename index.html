@@ -895,20 +895,27 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">21</div>
-                        <h2>1. ¿Qué es un PLC? (El Especialista Rápido)</h2>
+                        <h2>Fundamentos de Control y Cinética Química</h2>
                     </div>
-                    <div style="display: flex; flex-direction: column; gap: 1rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="font-size: 0.9rem; line-height: 1.4; column-count: 1;">
+                    <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
+                        
+                        <!-- Columna Izquierda: PLC -->
+                        <div class="slide-content" style="flex: 1; font-size: 0.8rem; line-height: 1.3; column-count: 1; overflow-y: auto;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; font-size: 0.95rem; margin-bottom: 0.5rem;">1. ¿Qué es un PLC? (El Especialista Rápido)</p>
                             <p>Un <strong>PLC (Programmable Logic Controller o Controlador Lógico Programable)</strong> es un equipo electrónico industrial diseñado para controlar máquinas o procesos específicos y de alta velocidad.</p>
                             <p><strong>Su naturaleza:</strong> Nació para reemplazar los antiguos tableros de relés eléctricos. Es robusto, procesa señales a una velocidad increíble (milisegundos) y es ideal para lógicas de encendido/apagado, enclavamientos de seguridad y control secuencial de motores.</p>
                             <p><strong>En el ingenio azucarero:</strong> Piensa en el PLC como el operador de una máquina específica. Controla equipos periféricos o paquetes cerrados ("skids").</p>
-                            <p><strong>Ejemplos típicos en tu planta:</strong></p>
-                            <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
-                                <li style="margin-bottom: 0.4rem;"><strong>&bull;</strong> El control de una centrífuga automatizada (arrancar, lavar, frenar y descargar en ciclos rápidos).</li>
-                                <li style="margin-bottom: 0.4rem;"><strong>&bull;</strong> El sistema de empaque y ensacado de azúcar.</li>
-                                <li style="margin-bottom: 0.4rem;"><strong>&bull;</strong> El sistema de alimentación física de las mesas de caña.</li>
-                            </ul>
                         </div>
+                        
+                        <!-- Columna Derecha: Cinética -->
+                        <div class="slide-content" style="flex: 1; font-size: 0.8rem; line-height: 1.3; column-count: 1; overflow-y: auto; padding-left: 1rem; border-left: 1px solid #ccc;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; font-size: 0.95rem; margin-bottom: 0.5rem;">CINETICA QUIMICO-TERMICA EN EL PROCESO DE CLARIFICACION</p>
+                            <p style="font-weight: bold; margin-bottom: 0.5rem;">HIDRÓLISIS Y DESTRUCCIÓN DE AZUCARES.</p>
+                            <p>Tanto la <strong>Hidrólisis de la Sacarosa</strong> (comúnmente llamada inversión) como la <strong>destrucción de los Azúcares Reductores</strong> son las dos reacciones de degradación más críticas y temidas en la Clarificación y Evaporación del Jugo.</p>
+                            <p>Mientras que la primera representa una pérdida directa de la materia prima que balanceamos económicamente, la segunda es la principal responsable de la generación de color oscuro indeseado y compuestos viscosos que dificultan la Cristalización.</p>
+                            <p>A continuación, profundizamos en la cinética, mecanismos químicos y variables operativas de ambos fenómenos.</p>
+                        </div>
+
                     </div>
 
     <div class="bottom-wave">
@@ -928,26 +935,26 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">22</div>
-                        <h2>2. ¿Qué tiene que ver un PLC con un DCS?</h2>
+                        <h2>Fundamentos de Control y Cinética Química (Cont.)</h2>
                     </div>
-                    <div style="display: flex; flex-direction: column; gap: 1rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div style="display: flex; flex-direction: row; gap: 2rem; flex: 1;">
-                            <div class="slide-content" style="flex: 1; font-size: 0.8rem; line-height: 1.3; column-count: 1;">
-                                <p><strong>El Trabajo en Equipo</strong></p>
-                                <p>Si el PLC es el especialista que maneja una máquina o área pequeña a gran velocidad, el DCS (como el Experion de Honeywell que vimos) es el Gerente General de todo el ingenio.</p>
-                                <p>En un ingenio azucarero, el PLC y el DCS no compiten, sino que se complementan e integran a través de redes de comunicación industrial (como Modbus, Profibus o Ethernet/IP).</p>
-                                <p><strong>A. Jerarquía y Conectividad (Arquitectura):</strong></p>
-                                <p>Los PLCs controlan sus máquinas locales, pero le reportan sus datos en tiempo real al DCS.</p>
-                                <p><em>En la práctica:</em> El PLC de la centrífuga maneja el motor y los tiempos de purga, pero le envía al DCS los datos de cuántas toneladas se van procesando. El operador en la sala central puede ver lo que hace la centrífuga sin ir físicamente hasta ella.</p>
-                            </div>
-                            <div class="slide-content" style="flex: 1; font-size: 0.8rem; line-height: 1.3; column-count: 1;">
-                                <p><strong>B. Enfoque de Proceso vs. Máquina</strong></p>
-                                <ul style="padding-left: 1rem;">
-                                    <li style="margin-bottom: 0.8rem;"><strong>&bull; El DCS maneja el "Proceso Continuo":</strong> La evaporación (FFE) y la clarificación (SRT) no se pueden detener de golpe; requieren un control suave, analógico, de sintonía matemática (lazos PID) y balances de masa/energía en todo el ingenio. El DCS ve la foto completa.</li>
-                                    <li><strong>&bull; El PLC maneja el "Proceso Discreto" o por lotes:</strong> Maneja arranques, paradas mecánicas y lógicas de protección de equipos individuales donde el tiempo de respuesta debe ser inmediato para evitar que un motor se queme o una faja se rompa.</li>
-                                </ul>
-                            </div>
+                    <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
+                        
+                        <!-- Columna Izquierda: PLC -->
+                        <div class="slide-content" style="flex: 1; font-size: 0.9rem; line-height: 1.4; column-count: 1; overflow-y: auto;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; margin-bottom: 0.8rem;">Ejemplos típicos en tu planta:</p>
+                            <ul style="padding-left: 1.5rem;">
+                                <li style="margin-bottom: 0.6rem;"><strong>&bull;</strong> El control de una centrífuga automatizada (que requiere arrancar, lavar, frenar y descargar en ciclos rápidos de pocos minutos).</li>
+                                <li style="margin-bottom: 0.6rem;"><strong>&bull;</strong> El sistema de empaque y ensacado de azúcar.</li>
+                                <li style="margin-bottom: 0.6rem;"><strong>&bull;</strong> O el sistema de alimentación física de las mesas de caña.</li>
+                            </ul>
                         </div>
+                        
+                        <!-- Columna Derecha: Cinética -->
+                        <div class="slide-content" style="flex: 1; font-size: 0.9rem; line-height: 1.4; column-count: 1; overflow-y: auto; padding-left: 1rem; border-left: 1px solid #ccc;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; font-size: 0.95rem; margin-bottom: 0.5rem;">1. Hidrólisis de la Sacarosa (Inversión)</p>
+                            <p>La sacarosa es un disacárido compuesto por una molécula de glucosa y una de fructosa unidas por un enlace glucosídico α(1→2). La hidrólisis consiste en la ruptura de este enlace mediante la adición de una molécula de agua, transformando el disacárido en dos monosacáridos (Azúcares Reductores).</p>
+                        </div>
+                        
                     </div>
 
     <div class="bottom-wave">
@@ -967,25 +974,33 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">23</div>
-                        <h2>Cinética Químico-Térmica en Clarificación</h2>
+                        <h2>Fundamentos de Control y Cinética Química (Cont.)</h2>
                     </div>
                     <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="flex: 1; font-size: 0.85rem; line-height: 1.4; column-count: 1; overflow-y: auto;">
-                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem;">HIDRÓLISIS Y DESTRUCCIÓN DE AZUCARES</p>
-                            <p>Tanto la <strong>Hidrólisis de la Sacarosa</strong> (comúnmente llamada inversión) como la <strong>destrucción de los Azúcares Reductores</strong> son las dos reacciones de degradación más críticas y temidas en la Clarificación y Evaporación del Jugo.</p>
-                            <ul style="padding-left: 1.5rem; margin-top: 1rem; margin-bottom: 1rem;">
-                                <li style="margin-bottom: 0.5rem;"><strong>&bull; Pérdida Directa:</strong> La primera representa una pérdida directa de la materia prima que balanceamos económicamente.</li>
-                                <li><strong>&bull; Generación de Color:</strong> La segunda es la principal responsable de la generación de color oscuro indeseado y compuestos viscosos que dificultan la Cristalización.</li>
-                            </ul>
-                            <p><strong>1. Hidrólisis de la Sacarosa (Inversión)</strong></p>
-                            <p>La sacarosa es un disacárido compuesto por una molécula de glucosa y una de fructosa unidas por un enlace glucosídico α(1→2). La hidrólisis consiste en la ruptura de este enlace mediante la adición de una molécula de agua, transformando el disacárido en dos monosacáridos (Azúcares Reductores).</p>
+                        
+                        <!-- Columna Izquierda: PLC -->
+                        <div class="slide-content" style="flex: 1; font-size: 0.8rem; line-height: 1.3; column-count: 1; overflow-y: auto;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; font-size: 0.95rem; margin-bottom: 0.5rem;">2. ¿Qué tiene que ver un PLC con un DCS? (El Trabajo en Equipo)</p>
+                            <p>Si el PLC es el especialista que maneja una máquina o área pequeña a gran velocidad, el DCS (como el Experion de Honeywell que vimos) es el Gerente General de todo el ingenio.</p>
+                            <p>En un ingenio azucarero, el PLC y el DCS no compiten, sino que se complementan e integran a través de redes de comunicación industrial (como Modbus, Profibus o Ethernet/IP).</p>
+                            <p>Aquí tienes cómo se relacionan y por qué coexisten en tu lugar de trabajo: (videos)</p>
                         </div>
-                        <div style="flex: 0.8; display: flex; flex-direction: row; gap: 1rem; justify-content: center; align-items: center; min-height: 0; min-width: 0; overflow: hidden;">
-                            <figure style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; margin: 0; background: #fff; flex: 1; min-width: 0; height: 100%; max-height: 100%;">
-                                <img src="contenido/Diapositiva23-Inversión de la Sacarosa (Hidrolisis).jpeg" style="width: 100%; height: 100%; flex: 1; min-height: 0; min-width: 0; display: block; object-fit: contain;">
-                                <figcaption style="padding: 0.5rem; background: var(--agrolmos-dark-green); color: white; font-size: 0.8rem; font-weight: bold; text-align: center;">Inversión de la Sacarosa (Hidrolisis)</figcaption>
+                        
+                        <!-- Columna Derecha: Cinética -->
+                        <div class="slide-content" style="flex: 1.2; font-size: 0.8rem; line-height: 1.3; column-count: 1; overflow-y: auto; padding-left: 1rem; border-left: 1px solid #ccc;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; font-size: 0.95rem; margin-bottom: 0.5rem;">Factores Determinantes de la Inversión</p>
+                            <p style="margin-bottom: 0.6rem;">La velocidad de esta reacción está regida por la ecuación de Arrhenius y depende drásticamente de tres variables que el operador de planta debe vigilar:</p>
+                            
+                            <p style="margin-bottom: 0.4rem;"><strong>1. pH (Concentración de iones H+):</strong> Es el factor catalizador más agresivo. La inversión es una reacción catalizada por ácidos. A menor pH (jugo ácido), la velocidad de hidrólisis aumenta de forma exponencial. Por cada unidad que baje el pH por debajo de 7.0, la pérdida de sacarosa se multiplica significativamente.</p>
+                            <p style="margin-bottom: 0.4rem;"><strong>2. Temperatura:</strong> Aporta la energía de activación necesaria. Por encima de los 75°C, cualquier caída de pH provoca una inversión masiva. En los calentadores y el tanque flash (102°C - 105°C), un jugo mal encalado (ácido) destruirá toneladas de sacarosa en cuestión de segundos.</p>
+                            <p style="margin-bottom: 0.4rem;"><strong>3. Tiempo de Residencia:</strong> La inversión es una reacción de primer orden respecto a la concentración de sacarosa. A mayor tiempo de exposición al calor y al ácido, mayor es la pérdida. Esta es la razón de ser de los clarificadores SRT (30-45 min) frente a los antiguos Dorr (2-3 horas).</p>
+                            
+                            <figure style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; margin: 1rem auto 0 auto; background: #fff; width: 90%;">
+                                <img src="contenido/Diapositiva23-Inversión de la Sacarosa (Hidrolisis).jpeg" style="width: 100%; height: auto; max-height: 180px; display: block; object-fit: contain;">
+                                <figcaption style="padding: 0.4rem; background: var(--agrolmos-dark-green); color: white; font-size: 0.75rem; font-weight: bold; text-align: center;">Inversión de la Sacarosa (Hidrolisis)</figcaption>
                             </figure>
                         </div>
+                        
                     </div>
 
     <div class="bottom-wave">
@@ -1005,27 +1020,24 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">24</div>
-                        <h2>Factores Determinantes de la Inversión</h2>
+                        <h2>Fundamentos de Control y Cinética Química (Cont.)</h2>
                     </div>
-                    <div style="display: flex; flex-direction: column; gap: 1rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="font-size: 0.85rem; line-height: 1.4; column-count: 1;">
-                            <p>La velocidad de la reacción de inversión está regida por la ecuación de Arrhenius y depende drásticamente de tres variables que el operador de planta debe vigilar:</p>
-                            
-                            <div style="margin-top: 1rem;">
-                                <p style="color: var(--agrolmos-dark-green); font-weight: bold; margin-bottom: 0.2rem;">1. pH (Concentración de iones H+)</p>
-                                <p>Es el factor catalizador más agresivo. La inversión es una reacción catalizada por ácidos. A menor pH (jugo ácido), la velocidad de hidrólisis aumenta de forma exponencial. Por cada unidad que baje el pH por debajo de 7.0, la pérdida de sacarosa se multiplica significativamente.</p>
-                            </div>
-                            
-                            <div style="margin-top: 1rem;">
-                                <p style="color: var(--agrolmos-dark-green); font-weight: bold; margin-bottom: 0.2rem;">2. Temperatura</p>
-                                <p>Aporta la energía de activación necesaria. Por encima de los 75°C, cualquier caída de pH provoca una inversión masiva. En los calentadores y el tanque flash (102°C - 105°C), un jugo mal encalado (ácido) destruirá toneladas de sacarosa en cuestión de segundos.</p>
-                            </div>
-                            
-                            <div style="margin-top: 1rem;">
-                                <p style="color: var(--agrolmos-dark-green); font-weight: bold; margin-bottom: 0.2rem;">3. Tiempo de Residencia</p>
-                                <p>La inversión es una reacción de primer orden respecto a la concentración de sacarosa. A mayor tiempo de exposición al calor y al ácido, mayor es la pérdida. Esta es la razón de ser de los clarificadores SRT (30-45 min) frente a los antiguos Dorr (2-3 horas).</p>
-                            </div>
+                    <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
+                        
+                        <!-- Columna Izquierda: PLC -->
+                        <div class="slide-content" style="flex: 1; font-size: 0.85rem; line-height: 1.4; column-count: 1; overflow-y: auto;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; margin-bottom: 0.5rem;">A. Jerarquía y Conectividad (Arquitectura del Ingenio)</p>
+                            <p>Los PLCs controlan sus máquinas locales, pero le reportan sus datos en tiempo real al DCS.</p>
+                            <p><strong>En la práctica:</strong> El PLC de la centrífuga maneja el motor y los tiempos de purga, pero le envía al DCS los datos de cuántas toneladas se van procesando y si hay alguna alarma. El operador en la sala de control central (frente a las pantallas del DCS) puede ver lo que hace la centrífuga sin necesidad de ir físicamente hasta ella.</p>
                         </div>
+                        
+                        <!-- Columna Derecha: Cinética -->
+                        <div class="slide-content" style="flex: 1; font-size: 0.85rem; line-height: 1.4; column-count: 1; overflow-y: auto; padding-left: 1rem; border-left: 1px solid #ccc;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; font-size: 0.95rem; margin-bottom: 0.5rem;">2. Destrucción de Azúcares Reductores</p>
+                            <p>A diferencia de la sacarosa, los azúcares reductores (glucosa y fructosa) presentes de forma natural en la caña, o generados por la inversión, son moléculas muy inestables en medios alcalinos y de alta temperatura.</p>
+                            <p>Cuando el jugo se somete a un pH elevado (encalado) y a calor, estos monosacáridos experimentan una degradación oxidativa conocida como <strong>Fragmentación Alcalina</strong>.</p>
+                        </div>
+                        
                     </div>
 
     <div class="bottom-wave">
@@ -1045,20 +1057,28 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">25</div>
-                        <h2>2. Destrucción de Azúcares Reductores</h2>
+                        <h2>Fundamentos de Control y Cinética Química (Cont.)</h2>
                     </div>
-                    <div style="display: flex; flex-direction: column; gap: 1rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="font-size: 0.9rem; line-height: 1.4; column-count: 1;">
-                            <p>A diferencia de la sacarosa, los <strong>azúcares reductores (glucosa y fructosa)</strong> presentes de forma natural en la caña, o generados por la inversión, son moléculas muy inestables en medios alcalinos y de alta temperatura.</p>
-                            <p>Cuando el jugo se somete a un pH elevado (encalado) y a calor, estos monosacáridos experimentan una degradación oxidativa conocida como <strong>Fragmentación Alcalina</strong>.</p>
-                            
-                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; margin-top: 1rem; font-size: 0.95rem;">Mecanismo de Destrucción y Consecuencias</p>
-                            
-                            <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
-                                <li style="margin-bottom: 0.6rem;"><strong>&bull; Enolización:</strong> En presencia de iones OH- (pH alto), la glucosa y la fructosa se isomerizan rápidamente a través de un intermediario común llamado enodiol.</li>
-                                <li style="margin-bottom: 0.6rem;"><strong>&bull; Ruptura de la Cadena:</strong> El enodiol es altamente inestable y se rompe en fragmentos de carbono más cortos (triosas y diosas), dando lugar a ácidos orgánicos de cadena corta, principalmente ácido láctico, ácido acético, ácido fórmico y ácido glucónico.</li>
+                    <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
+                        
+                        <!-- Columna Izquierda: PLC -->
+                        <div class="slide-content" style="flex: 1; font-size: 0.85rem; line-height: 1.4; column-count: 1; overflow-y: auto;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; margin-bottom: 0.5rem;">B. El Enfoque del Proceso vs. El Enfoque de la Máquina</p>
+                            <ul style="padding-left: 1.5rem;">
+                                <li style="margin-bottom: 0.6rem;"><strong>&bull;</strong> <span style="font-weight: bold;">El DCS maneja el "Proceso Continuo":</span> La evaporación (FFE) y la clarificación (SRT) no se pueden detener de golpe; requieren un control suave, analógico, de sintonía matemática (lazos PID) y balances de masa/energía en todo el ingenio. El DCS ve la foto completa.</li>
+                                <li style="margin-bottom: 0.6rem;"><strong>&bull;</strong> <span style="font-weight: bold;">El PLC maneja el "Proceso Discreto" o por lotes:</span> Maneja arranques, paradas mecánicas y lógicas de protección de equipos individuales donde el tiempo de respuesta debe ser inmediato para evitar que un motor se queme o una faja se rompa.</li>
                             </ul>
                         </div>
+                        
+                        <!-- Columna Derecha: Cinética -->
+                        <div class="slide-content" style="flex: 1; font-size: 0.85rem; line-height: 1.4; column-count: 1; overflow-y: auto; padding-left: 1rem; border-left: 1px solid #ccc;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; font-size: 0.95rem; margin-bottom: 0.5rem;">Mecanismo de Destrucción y Consecuencias</p>
+                            <ul style="padding-left: 1.5rem;">
+                                <li style="margin-bottom: 0.6rem;"><strong>&bull;</strong> <span style="font-weight: bold;">Enolización:</span> En presencia de iones OH- (pH alto), la glucosa y la fructosa se isomerizan rápidamente a través de un intermediario común llamado enodiol.</li>
+                                <li style="margin-bottom: 0.6rem;"><strong>&bull;</strong> <span style="font-weight: bold;">Ruptura de la Cadena:</span> El enodiol es altamente inestable y se rompe en fragmentos de carbono más cortos (triosas y diosas), dando lugar a ácidos orgánicos de cadena corta, principalmente ácido láctico, ácido acético, ácido fórmico y ácido glucónico.</li>
+                            </ul>
+                        </div>
+                        
                     </div>
 
     <div class="bottom-wave">
@@ -1078,61 +1098,49 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">26</div>
-                        <h2>Consecuencias directas en el proceso:</h2>
+                        <h2>Fundamentos de Control: Cuadro Comparativo</h2>
                     </div>
-                    <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="flex: 1; column-count: 2; overflow-y: hidden;">
-                            <p>Caída irreversible del pH: La formación de estos ácidos consume la alcalinidad del jugo.</p>
-                            <p>Es por esto que el jugo entra al clarificador con un pH encalado de 7.4 y sale como jugo</p>
-                            <p>claro con un pH de 6.9 a 7.0. Si la destrucción es masiva, el pH caerá por deb ajo de 6.5</p>
-                            <p>en los evaporadores, disparando la inversión de sacarosa en esa etapa.</p>
-                            <ul>
-                                <li><strong>&bull;</strong> Formación de Color (Polimerización): Los fragmentos intermedios solubles</li>
-                            </ul>
-                            <p>reaccionan entre sí y con los aminoácidos del jugo (reacción de Maillard),</p>
-                            <p>polimerizándose en macro-moléculas complejas de color marrón oscuro llamadas</p>
-                            <p>melanoidinas. Este color se fij a fuertemente en el cristal, atentando contra la</p>
-                            <p>calidad de la azúcar rubia (la vuelve demasiado oscura o fuera de rango</p>
-                            <p>comercial).</p>
-                            <ul>
-                                <li><strong>&bull;</strong> Aumento de Viscosidad: Las sales de calcio de estos ácidos (como el lactato de</li>
-                            </ul>
-                            <p>calcio) son altamente solubles, incrementan la viscosidad de las melazas y las</p>
-                            <p>masas cocidas, ralentizando el trabajo en los tachos y centrifugas.</p>
-                            <p>Cuadro Comparativo.</p>
-                            <p>Características PLC (Controlador Lógico</p>
-                            <p>Programable)</p>
-                            <p>DCS (Sistema de Control</p>
-                            <p>Distribuido)</p>
-                            <p>Enfoque Principal Control de máquinas</p>
-                            <p>específicas y lógicas rápidas.</p>
-                            <p>Control de todo el proceso</p>
-                            <p>continuo del ingenio.</p>
-                            <p>Tiempo de Respuesta Ultra rápido (milisegundos)</p>
-                            <p>ideal para paradas de</p>
-                            <p>emergencia mecánicas.</p>
-                            <p>Rápido pero enfocado en la</p>
-                            <p>estabilidad de variables</p>
-                            <p>térmicas y químicas a largo</p>
-                            <p>plazo.</p>
-                            <p>Visualización HDMI Suele tener una pantalla</p>
-                            <p>pequeña local al costado de la</p>
-                            <p>máquina.</p>
-                            <p>Centralizado en una Sala de</p>
-                            <p>Control Principal con múltiples</p>
-                            <p>monitores.</p>
-                            <p>Ejemplo en el Ingenio Control de una centrífuga, el</p>
-                            <p>soplador de hollín de la caldera</p>
-                            <p>o la ensacadora.</p>
-                            <p>Control interconectado de la</p>
-                            <p>molienda, Clarificación SRT y</p>
-                            <p>Evaporadores.</p>
-                            <p>Base de Datos Local limitada a su programa. Centraliza, guarda el histórico</p>
-                            <p>de datos de todo el Ingenio por</p>
-                            <p>meses o por años.</p>
+                    <div style="display: flex; flex-direction: column; gap: 1rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
+                        <div style="flex: 1; font-size: 0.9rem; line-height: 1.4; overflow-y: hidden; color: var(--text-dark);">
+                            <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-top: 0.2rem; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                <thead>
+                                    <tr style="background-color: var(--agrolmos-green); color: white;">
+                                        <th style="padding: 5px 8px; border: 1px solid #ccc; font-weight: 600; text-align: left; width: 20%;">Características</th>
+                                        <th style="padding: 5px 8px; border: 1px solid #ccc; font-weight: 600; text-align: left; width: 40%;">PLC (Controlador Lógico Programable)</th>
+                                        <th style="padding: 5px 8px; border: 1px solid #ccc; font-weight: 600; text-align: left; width: 40%;">DCS (Sistema de Control Distribuido)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="background-color: #f9f9f9;">
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc; font-weight: bold;">Enfoque Principal</td>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc;">Control de máquinas específicas y lógicas rápidas.</td>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc;">Control de todo el proceso continuo del ingenio.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc; font-weight: bold;">Tiempo de Respuesta</td>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc;">Ultra rápido (milisegundos) ideal para paradas de emergencia mecánicas.</td>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc;">Rápido pero enfocado en la estabilidad de variables térmicas y químicas a largo plazo.</td>
+                                    </tr>
+                                    <tr style="background-color: #f9f9f9;">
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc; font-weight: bold;">Visualización HMI</td>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc;">Suele tener una pantalla pequeña local al costado de la máquina.</td>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc;">Centralizado en una Sala de Control Principal con múltiples monitores.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc; font-weight: bold;">Ejemplo en el Ingenio</td>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc;">Control de una centrífuga, el soplador de hollín de la caldera o la ensacadora.</td>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc;">Control interconectado de la molienda, Clarificación SRT y Evaporadores.</td>
+                                    </tr>
+                                    <tr style="background-color: #f9f9f9;">
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc; font-weight: bold;">Base de Datos</td>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc;">Local limitada a su programa.</td>
+                                        <td style="padding: 5px 8px; border: 1px solid #ccc;">Centraliza, guarda el histórico de datos de todo el Ingenio por meses o por años.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-
+                    
     <div class="bottom-wave">
         <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
             <path fill="#2e7d32" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,144C672,139,768,181,864,197.3C960,213,1056,203,1152,176C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
@@ -1150,25 +1158,15 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">27</div>
-                        <h2>3. El Dilema del Clarificador: El Equilibrio pH-Temperatura</h2>
+                        <h2>Cinética Química: Consecuencias en el Proceso</h2>
                     </div>
-                    <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="flex: 1; column-count: 2; overflow-y: hidden;">
-                            <p>Para un ingeniero azucarero, la operación de clarificación es un sutil juego de balance</p>
-                            <p>químico, ya que las condiciones que detienen la inversión de sacarosa aceleran la</p>
-                            <p>destrucción de los reductores, y viceversa.</p>
-                            <p><strong>Zona Ácida (pH < 7.0):</strong> Protege los azúcares reductores (no hay color por destrucción),</p>
-                            <p>pero destruye la sacarosa por inversión (pérdida económica directa de Pol).</p>
-                            <p><strong>Zona Alcalina (pH > 7.5):</strong> Protege la sacarosa al 100% (cero inversión), pero destruye los</p>
-                            <p>azúcares reductores, generando ácidos que bajan el pH y disparando la formación de color</p>
-                            <p>oscuro indeseado.</p>
-                            <p>CONCLUSION</p>
-                            <p>"En nuestro ingenio azucarero, contamos con ambos recursos porque optimizan</p>
-                            <p>la planta a diferentes niveles. Los PLCs garantizan que los equipos individuales</p>
-                            <p>operen de forma segura y autónoma a nivel de campo, mientras que el DCS actúa</p>
-                            <p>como el cerebro integ rador que comunica a todas las áreas, permitiéndonos</p>
-                            <p>optimizar el uso del vapor, mantener el pH exacto en la clarificación y asegurar</p>
-                            <p>la eficiencia global de la fábrica desde un solo lugar."</p>
+                    <div style="display: flex; flex-direction: column; gap: 1rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
+                        <div style="flex: 1; font-size: 1rem; line-height: 1.5; overflow-y: hidden; color: var(--text-dark); text-align: justify; padding: 1rem 2rem;">
+                            <ul style="list-style: none;">
+                                <li style="margin-bottom: 1.5rem; position: relative; padding-left: 1.8rem;"><strong style="color: var(--agrolmos-green); position: absolute; left: 0;">&bull;</strong> <span style="font-weight: bold; color: var(--agrolmos-dark-green);">Caída irreversible del pH:</span> La formación de estos ácidos consume la alcalinidad del jugo. Es por esto que el jugo entra al clarificador con un pH encalado de 7.4 y sale como jugo claro con un pH de 6.9 a 7.0. Si la destrucción es masiva, el pH caerá por debajo de 6.5 en los evaporadores, disparando la inversión de sacarosa en esa etapa.</li>
+                                <li style="margin-bottom: 1.5rem; position: relative; padding-left: 1.8rem;"><strong style="color: var(--agrolmos-green); position: absolute; left: 0;">&bull;</strong> <span style="font-weight: bold; color: var(--agrolmos-dark-green);">Formación de Color (Polimerización):</span> Los fragmentos intermedios solubles reaccionan entre sí y con los aminoácidos del jugo (reacción de Maillard), polimerizándose en macro-moléculas complejas de color marrón oscuro llamadas melanoidinas. Este color se fija fuertemente en el cristal, atentando contra la calidad de la azúcar rubia.</li>
+                                <li style="margin-bottom: 1.5rem; position: relative; padding-left: 1.8rem;"><strong style="color: var(--agrolmos-green); position: absolute; left: 0;">&bull;</strong> <span style="font-weight: bold; color: var(--agrolmos-dark-green);">Aumento de Viscosidad:</span> Las sales de calcio de estos ácidos (como el lactato de calcio) son altamente solubles, incrementan la viscosidad de las melazas y las masas cocidas, ralentizando el trabajo en los tachos y centrifugas.</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -1189,19 +1187,70 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">28</div>
-                        <h2>Control Operativo Óptimo – pH del Jugo Encalado y Claro</h2>
+                        <h2>El Dilema del Clarificador y Conclusión General</h2>
                     </div>
                     <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="flex: 1; column-count: 2; overflow-y: hidden;">
-                            <p>Para minimizar ambos fenómenos simultáneamente en la fabricación de azúcar rubia, la</p>
-                            <p>industria ha definido una ventana de control estricta:</p>
-                            <p>pH del Jugo Encalado (Sacarato): Se opera a un pH de 7. 4 a 7.5. Es lo suficientemente</p>
-                            <p>alto para neutralizar la inversión en el tránsito caliente, pero lo suficientemente bajo para</p>
-                            <p>evitar una destrucción masiva y violenta de la glucosa/fructosa.</p>
-                            <p>pH dell Jugo Claro (resultante): debe de mantenerse en un rango casi neutro 6.9 a 7.1 de</p>
-                            <p>pH para evitar la inversión de la sacarosa</p>
-                            <p>CLARIFICACIÓN DEL JUGO DE CAÑA</p>
+                        
+                        <!-- Columna Izquierda: Cinética -->
+                        <div style="flex: 1; font-size: 0.8rem; line-height: 1.4; overflow-y: auto; color: var(--text-dark); padding-right: 1rem; text-align: justify;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; font-size: 0.9rem; margin-bottom: 0.5rem;">El Equilibrio pH-Temperatura</p>
+                            <p style="margin-bottom: 0.8rem;">Para un ingeniero azucarero, la operación de clarificación es un sutil juego de balance químico, ya que las condiciones que detienen la inversión de sacarosa aceleran la destrucción de los reductores, y viceversa.</p>
+                            
+                            <ul style="padding-left: 1.5rem; list-style: none;">
+                                <li style="margin-bottom: 0.6rem; position: relative;"><strong style="color: var(--agrolmos-green); position: absolute; left: 0;">&bull;</strong> <span style="font-weight: bold;">Zona Ácida (pH &lt; 7.0):</span> Protege los azúcares reductores (no hay color por destrucción), pero destruye la sacarosa por inversión (pérdida económica directa de Pol).</li>
+                                <li style="margin-bottom: 0.6rem; position: relative;"><strong style="color: var(--agrolmos-green); position: absolute; left: 0;">&bull;</strong> <span style="font-weight: bold;">Zona Alcalina (pH &gt; 7.5):</span> Protege la sacarosa al 100% (cero inversión), pero destruye los azúcares reductores, generando ácidos que bajan el pH y disparando la formación de color oscuro indeseado.</li>
+                            </ul>
                         </div>
+                        
+                        <!-- Columna Derecha: Conclusión -->
+                        <div style="flex: 1; font-size: 0.85rem; line-height: 1.5; overflow-y: auto; color: var(--text-dark); padding-left: 1rem; border-left: 1px solid #ccc; text-align: justify;">
+                            <p style="color: var(--agrolmos-dark-green); font-weight: bold; font-size: 0.9rem; margin-bottom: 0.5rem;">CONCLUSIÓN: Automatización</p>
+                            <p style="font-style: italic; background-color: #f0f7f1; padding: 1.2rem; border-radius: 8px; border-left: 4px solid var(--agrolmos-green);">
+                                "En nuestro ingenio azucarero, contamos con ambos recursos porque optimizan la planta a diferentes niveles. Los PLCs garantizan que los equipos individuales operen de forma segura y autónoma a nivel de campo, mientras que el DCS actúa como el cerebro integrador que comunica a todas las áreas, permitiéndonos optimizar el uso del vapor, mantener el pH exacto en la clarificación y asegurar la eficiencia global de la fábrica desde un solo lugar."
+                            </p>
+                        </div>
+                        
+                    </div>
+
+    <div class="bottom-wave">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#2e7d32" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,144C672,139,768,181,864,197.3C960,213,1056,203,1152,176C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <div class="wave-footer-text">
+            <span>Ing. River Regalado Villegas<br>Supervisor COI AGROLMOS S.A.</span>
+        </div>
+    </div></div>
+
+<div class="slide" style="">
+
+                    
+    <div class="agrolmos-logo">
+        <img src="contenido/logoAgroOlmo.png" alt="Agrolmos" style="height: 50px; display: block;">
+    </div>
+                    <div class="slide-header">
+                        <div class="slide-number">29</div>
+                        <h2>Control Operativo Óptimo – pH del Jugo Encalado y Claro</h2>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
+                        
+                        <div style="flex: 1; font-size: 0.85rem; line-height: 1.4; overflow-y: hidden; color: var(--text-dark); text-align: justify; padding: 0 2rem;">
+                            <p style="margin-bottom: 1rem; font-size: 0.95rem;">Para minimizar ambos fenómenos simultáneamente en la fabricación de azúcar rubia, la industria ha definido una <strong>ventana de control estricta</strong>:</p>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="background-color: #f9f9f9; padding: 1rem 1.5rem; border-radius: 8px; border-left: 5px solid var(--agrolmos-green); box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                                    <h3 style="color: var(--agrolmos-dark-green); margin-bottom: 0.3rem; font-size: 0.95rem;">pH del Jugo Encalado (Sacarato)</h3>
+                                    <p>Se opera a un pH de <strong>7.4 a 7.5</strong>. Es lo suficientemente alto para neutralizar la inversión en el tránsito caliente, pero lo suficientemente bajo para evitar una destrucción masiva y violenta de la glucosa/fructosa.</p>
+                                </div>
+                                
+                                <div style="background-color: #f9f9f9; padding: 1rem 1.5rem; border-radius: 8px; border-left: 5px solid var(--agrolmos-blue); box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                                    <h3 style="color: var(--agrolmos-dark-green); margin-bottom: 0.3rem; font-size: 0.95rem;">pH del Jugo Claro (Resultante)</h3>
+                                    <p>Debe de mantenerse en un rango casi neutro de <strong>6.9 a 7.1</strong> de pH para evitar la inversión de la sacarosa.</p>
+                                </div>
+                            </div>
+                            
+                            <p style="text-align: center; font-weight: bold; color: var(--agrolmos-green); margin-top: 1rem; font-size: 1rem; letter-spacing: 1px;">CLARIFICACIÓN DEL JUGO DE CAÑA</p>
+                        </div>
+                        
                     </div>
 
     <div class="bottom-wave">

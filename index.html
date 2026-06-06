@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Tratamiento y Clarificación del Jugo de Caña</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="presentation-container">
+        
+        <div class="slide-track" id="slideTrack">
+            <!-- Slides will be dynamically injected here -->
+        </div>
+
+        <button class="nav-btn prev-btn" id="prevBtn" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="nav-btn next-btn" id="nextBtn" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="slide-counter">
+            <span id="currentSlideNum">1</span> / <span id="totalSlideNum">10</span>
+        </div>
+    </div>
+
+    <script src="slides.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

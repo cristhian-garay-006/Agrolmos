@@ -171,6 +171,7 @@ h2 {
     padding-right: 1rem;
     column-count: 2;
     column-gap: 3rem;
+    text-align: justify;
 }
 
 .slide-content > * {

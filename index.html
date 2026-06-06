@@ -315,7 +315,7 @@
                         <h2>3.3 Calentador de Contacto Directo (CCD)</h2>
                     </div>
                     <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="flex: 1.8; column-count: 1; overflow-y: hidden; font-size: 0.8rem; padding-right: 10px;">
+                        <div class="slide-content" style="flex: 1.8; column-count: 1; overflow-y: hidden; font-size: 0.7rem; line-height: 1.2; padding-right: 10px;">
                             <p>Proceso: El jugo da el salto final de 97°C a 103°C mezclándose directamente con vapor de escape.</p>
                             <p>Control: Al romper el punto de ebullición, el DCS mantiene el lazo cerrado midiendo la temperatura de salida a 103°C para abrir o cerrar el paso de vapor, asegurando que los gases incondensables sean liberados correctamente.</p>
                             <p><br><strong>2.3.- Tanque Flash (Desgasificador)</strong></p>
@@ -352,17 +352,15 @@
                         <h2>4. Tanque Flash y Alimentación al Clarificador SRT</h2>
                     </div>
                     <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="flex: 1; column-count: 1; overflow-y: auto; font-size: 0.8rem;">
+                        <div class="slide-content" style="flex: 1.8; column-count: 1; overflow-y: hidden; font-size: 0.7rem; line-height: 1.2; padding-right: 10px;">
                             <p>Al salir a 103°C, el jugo entra al Tanque Flash para liberar la presión, eliminar el aire y los gases atrapados (que impedirían que las impurezas floten o decanten), y estabilizar el líquido antes de entrar al clarificador SRT.</p>
                             <p><strong>Automatización Integrada:</strong> El DCS realiza el control automático del nivel del tanque flash mediante una válvula automática instalada en la tubería de ingreso de jugo al Clarificador SRT. Si el nivel en el tanque flash sube, la válvula del DCS se abre de forma proporcional para enviar más jugo al SRT, manteniendo una alimentación hidrostática perfectamente suave y sin turbulencias.</p>
                             <p><br><strong>2.4.- Clarificador SRT (Short Retention Time – Corto Tiempo de Retención)</strong></p>
-                            <ul>
-                                <li><strong>&bull;</strong> Descripción: Clarificadores modernos de bajo volumen y diseño aerodinámico, que reemplazan a los antiguos y masivos decantadores tipo Dorr.</li>
-                                <li><strong>&bull;</strong> Función: Operan con tiempos de residencia de solo 30 a 45 minutos (en lugar de 2 a 3 horas). Reducen drásticamente las pérdidas de sacarosa por inversión térmica y la ganancia de color, entregando un jugo claro continuo y lodos densos.</li>
-                                <li><strong>&bull;</strong> En su interior el jugo debe mantenerse en un rango de temperatura estrictamente controlado de 99°C a 101°C (idealmente clavado en 100°C).</li>
-                            </ul>
+                            <p><strong>&bull;</strong> Descripción: Clarificadores modernos de bajo volumen y diseño aerodinámico, que reemplazan a los antiguos y masivos decantadores tipo Dorr.</p>
+                            <p><strong>&bull;</strong> Función: Operan con tiempos de residencia de solo 30 a 45 minutos (en lugar de 2 a 3 horas). Reducen drásticamente las pérdidas de sacarosa por inversión térmica y la ganancia de color, entregando un jugo claro continuo y lodos densos.</p>
+                            <p><strong>&bull;</strong> En su interior el jugo debe mantenerse en un rango de temperatura estrictamente controlado de 99°C a 101°C (idealmente clavado en 100°C).</p>
                         </div>
-                        <div style="flex: 0.8; display: flex; flex-direction: row; gap: 1rem; justify-content: center; align-items: center; min-height: 0; min-width: 0; overflow: hidden;">
+                        <div style="flex: 0.6; display: flex; flex-direction: row; gap: 1rem; justify-content: center; align-items: center; min-height: 0; min-width: 0; overflow: hidden;">
                             <figure style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; margin: 0; background: #fff; flex: 1; min-width: 0; height: 100%; max-height: 100%;">
                                 <video src="contenido/Diapositiva9- Clarificador SRT.mp4" controls style="width: 100%; height: 100%; flex: 1; min-height: 0; min-width: 0; display: block; object-fit: contain; background: #000;"></video>
                                 <figcaption style="padding: 0.5rem; background: var(--agrolmos-dark-green); color: white; font-size: 0.8rem; font-weight: bold; text-align: center;">Clarificador SRT</figcaption>
@@ -387,36 +385,21 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">10</div>
-                        <h2>DIAPOSITIVA 10</h2>
+                        <h2>5. Dosificación Automática del Floculante</h2>
                     </div>
-                    <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="flex: 1; column-count: 2; overflow-y: hidden;">
-                            <p>A continuación, se detallan las razones técnicas y fisicoquímicas de por qué este rango es</p>
-                            <p>el óptimo (100 °C temperatura del jugo en el Clarificador SRT):</p>
-                            <p>A. Evitar Corrientes de Convección (El enemigo del SRT)</p>
-                            <p>Si el jugo entrara al clarificador SRT sobrecalentado (a más de 101°C), continuaría</p>
-                            <p>hirviendo o liberando vapor microscópico dentro del equipo.</p>
-                            <ul>
-                                <li><strong>&bull;</strong> El problema: Estas burbujas residuales y las diferencias de densidad por exceso</li>
-                            </ul>
-                            <p>de calor generan corrientes de convección (remolinos internos).</p>
-                            <ul>
-                                <li><strong>&bull;</strong> El impacto: En un clarificador SRT, el tiempo de residencia es extremadamente</li>
-                            </ul>
-                            <p>corto (30 a 45 minutos) y el flujo es laminar. Cualquier turbulencia interna rompe</p>
-                            <p>los macroflóculos secundarios y hace que suban a la superficie, provocando un</p>
-                            <p>jugo claro turbio, con "pin-flocs" y arrastre de lodo hacia los evaporadores.</p>
-                            <p>5. Dosificación Automática del Floculante</p>
-                            <p>Para que las impurezas se aglutinen y decanten rápido en el SRT, se inyecta polímero en</p>
-                            <p>una dosis exacta de 3ppm (partes por millón).</p>
-                            <p>Acción del DCS: El DCS lee el flujómetro magnético de ingreso de jugo al clarificador</p>
-                            <p>y, mediante un cálculo matemático de relación (ratio control), ajusta la velocidad de la</p>
-                            <p>bomba de floculante. Si el flujo de jugo cambia, la bomba de floculante acelera o  frena</p>
-                            <p>de inmediato para asegurar que en cada tonelada de jugo existan estrictamente los 3</p>
-                            <p>gramos de floculante requeridos.</p>
+                    <div style="display: flex; flex-direction: row; gap: 3rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
+                        <div class="slide-content" style="flex: 1; column-count: 1; overflow-y: hidden; font-size: 0.8rem; line-height: 1.3;">
+                            <p>Para que las impurezas se aglutinen y decanten rápido en el SRT, se inyecta polímero en una dosis exacta de 3ppm (partes por millón).</p>
+                            <p><strong>Acción del DCS:</strong> El DCS lee el flujómetro magnético de ingreso de jugo al clarificador y, mediante un cálculo matemático de relación (ratio control), ajusta la velocidad de la bomba de floculante. Si el flujo de jugo cambia, la bomba de floculante acelera o frena de inmediato para asegurar que en cada tonelada de jugo existan estrictamente los 3 gramos de floculante requeridos.</p>
+                            <p>A continuación, se detallan las razones técnicas y fisicoquímicas de por qué este rango es el óptimo (100 °C temperatura del jugo en el Clarificador SRT):</p>
+                        </div>
+                        <div class="slide-content" style="flex: 1; column-count: 1; overflow-y: hidden; font-size: 0.8rem; line-height: 1.3;">
+                            <p><strong>A. Evitar Corrientes de Convección (El enemigo del SRT)</strong></p>
+                            <p>Si el jugo entrara al clarificador SRT sobrecalentado (a más de 101°C), continuaría hirviendo o liberando vapor microscópico dentro del equipo.</p>
+                            <p><strong>&bull;</strong> El problema: Estas burbujas residuales y las diferencias de densidad por exceso de calor generan corrientes de convección (remolinos internos).</p>
+                            <p><strong>&bull;</strong> El impacto: En un clarificador SRT, el tiempo de residencia es extremadamente corto (30 a 45 minutos) y el flujo es laminar. Cualquier turbulencia interna rompe los macroflóculos secundarios y hace que suban a la superficie, provocando un jugo claro turbio, con "pin-flocs" y arrastre de lodo hacia los evaporadores.</p>
                         </div>
                     </div>
-
     <div class="bottom-wave">
         <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
             <path fill="#2e7d32" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,144C672,139,768,181,864,197.3C960,213,1056,203,1152,176C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
@@ -434,23 +417,14 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">11</div>
-                        <h2>B. Prevenir la Inversión de la Sacarosa</h2>
+                        <h2>6. Derivación Automática de Lodos al Difusor</h2>
                     </div>
                     <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="flex: 1; column-count: 2; overflow-y: hidden;">
-                            <p>Como el jugo pasa por el clarificador durante casi tres cuartos de hora, mantenerlo por</p>
-                            <p>encima de 102°C aceleraría la cinética de la reacción de hidrólisis o inversión. Cada grado</p>
-                            <p>por encima de los 100°C incrementa la pérdida de Pol (azúcar recuperable),</p>
-                            <p>especialmente si ocurre una fluctuación hacia la zona ácida en el encalado.</p>
-                            <p>6. Derivación Automática de Lodos al Difusor</p>
-                            <p>En el fondo del clarificador SRT se concentran las impurezas (cachaza/lodos). En tu</p>
-                            <p>ingenio, estos lodos no van a filtros de vacío comunes, sino que se evacuan de forma</p>
-                            <p>automática y continua hacia el Difusor a un flujo controlado de 15 a 18m3/h.</p>
-                            <p>El Trabajo Híbrido: El DCS controla el lazo analógico del flujómetro de lodos y regula</p>
-                            <p>la válvula de control (o variador de la bomba de lodos) para que la evacuación se</p>
-                            <p>mantenga estrictamente en el rango de 15 a 18  m3/h. Por otro lado, el PLC controla el</p>
-                            <p>sistema mecánico de las rastras inferiores del SRT (torque del motor, alarmas de</p>
-                            <p>sobreesfuerzo y lógicas de lavado manual si las tuberías se llegan a tupir).</p>
+                        <div class="slide-content" style="flex: 1; column-count: 2; overflow-y: hidden; font-size: 0.8rem; line-height: 1.4;">
+                            <p>En el fondo del clarificador SRT se concentran las impurezas (cachaza/lodos). En tu ingenio, estos lodos no van a filtros de vacío comunes, sino que se evacuan de forma automática y continua hacia el Difusor a un flujo controlado de 15 a 18m3/h.</p>
+                            <p><strong>El Trabajo Híbrido:</strong> El DCS controla el lazo analógico del flujómetro de lodos y regula la válvula de control (o variador de la bomba de lodos) para que la evacuación se mantenga estrictamente en el rango de 15 a 18 m3/h. Por otro lado, el PLC controla el sistema mecánico de las rastras inferiores del SRT (torque del motor, alarmas de sobreesfuerzo y lógicas de lavado manual si las tuberías se llegan a tupir).</p>
+                            <p><br><strong>B. Prevenir la Inversión de la Sacarosa</strong></p>
+                            <p>Como el jugo pasa por el clarificador durante casi tres cuartos de hora, mantenerlo por encima de 102°C aceleraría la cinética de la reacción de hidrólisis o inversión. Cada grado por encima de los 100°C incrementa la pérdida de Pol (azúcar recuperable), especialmente si ocurre una fluctuación hacia la zona ácida en el encalado.</p>
                         </div>
                     </div>
 
@@ -471,23 +445,16 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">12</div>
-                        <h2>DIAPOSITIVA 12</h2>
+                        <h2>7. Recepción y Evacuación del Jugo Claro</h2>
                     </div>
-                    <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="flex: 1; column-count: 2; overflow-y: hidden;">
-                            <p>C. Evitar el "Efecto Sifón" por Enfriamiento (Menos de 98°C)</p>
-                            <p>Si por un mal aislamiento térmico del clarificador o un mal tiro en el flash la temperatura</p>
-                            <p>desciende por debajo de 95°C, la viscosidad del jugo aumenta sutilmente. Además, las</p>
-                            <p>diferencias de temperatura entre el jugo que entra y el que ya está asentado vu elven a</p>
-                            <p>generar corrientes térmicas que levantan el lodo del fondo.</p>
-                            <p>7. Recepción y Evacuación del Jugo Claro</p>
-                            <p>El jugo ya purificado y brillante sale por la parte superior del clarificador hacia el tanque</p>
-                            <p>de recepción de Jugo Claro.</p>
-                            <p>Control del DCS: Este tanque es el paso previo a los evaporadores. El DCS realiza un</p>
-                            <p>control de nivel analógico y gestiona la salida continua de este jugo hacia el Proceso de</p>
-                            <p>Evaporación. Al ser una salida continua, el DCS evita variaciones térmicas bruscas en los</p>
-                            <p>evaporadores, garantizando que la producción de azúcar rubia mantenga un ritmo de</p>
-                            <p>evaporación uniforme y eficiente energéticamente.</p>
+                    <div style="display: flex; flex-direction: row; gap: 3rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
+                        <div class="slide-content" style="flex: 1; column-count: 1; overflow-y: hidden; font-size: 0.8rem; line-height: 1.4;">
+                            <p>El jugo ya purificado y brillante sale por la parte superior del clarificador hacia el tanque de recepción de Jugo Claro.</p>
+                            <p><strong>Control del DCS:</strong> Este tanque es el paso previo a los evaporadores. El DCS realiza un control de nivel analógico y gestiona la salida continua de este jugo hacia el Proceso de Evaporación. Al ser una salida continua, el DCS evita variaciones térmicas bruscas en los evaporadores, garantizando que la producción de azúcar rubia mantenga un ritmo de evaporación uniforme y eficiente energéticamente.</p>
+                        </div>
+                        <div class="slide-content" style="flex: 1; column-count: 1; overflow-y: hidden; font-size: 0.8rem; line-height: 1.4;">
+                            <p><strong>C. Evitar el "Efecto Sifón" por Enfriamiento (Menos de 98°C)</strong></p>
+                            <p>Si por un mal aislamiento térmico del clarificador o un mal tiro en el flash la temperatura desciende por debajo de 95°C, la viscosidad del jugo aumenta sutilmente. Además, las diferencias de temperatura entre el jugo que entra y el que ya está asentado vuelven a generar corrientes térmicas que levantan el lodo del fondo.</p>
                         </div>
                     </div>
 
@@ -508,29 +475,18 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">13</div>
-                        <h2>Resumen Operativo del Clarificador SRT</h2>
+                        <h2>CONCLUSIÓN TÉCNICA</h2>
                     </div>
                     <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="flex: 1; column-count: 1; overflow-y: auto;">
-                            <p>El éxito de un clarificador SRT radica en la estabilidad absoluta. El jugo dentro del equipo</p>
-                            <p>debe estar térmicamente "muerto" (sin tendencia a hervir ni a enfriarse rápido), condición</p>
-                            <p>que solo se logra manteniéndolo a 100°C ( +-1°C). A esta temperatura, el flujo es</p>
-                            <p>perfectamente hidrodinámico, los macroflóculos caen por gravedad a su máxima</p>
-                            <p>velocidad (30 - 50 cm/min) y las pérdidas de sacarosa se mantienen en el mínimo técnico</p>
-                            <p>controlable.</p>
-                            <p>CONCLUSIÓN TÉCNICA</p>
-                            <p>"Como hemos visto, nuestro ingenio aprovecha al máximo esta tecnología híbrida.</p>
-                            <p>Mientras el PLC se encarga de que las bombas y motores operen de forma segura, el DCS</p>
-                            <p>Honeywell realiza la sintonía fina: calcula las 3 ppm de floculante, mantiene el rango de</p>
-                            <p>15 a 18 m3/h de lodos al difusor y realiza los perfiles térmicos exactos desde los 55  °C</p>
-                            <p>de las placas hasta los 103  °C del calentador de contacto directo. El resultado de esta</p>
-                            <p>automatización es un jugo claro de máxima pureza, listo para convertirse en azúcar rubia</p>
-                            <p>de alta calidad."</p>
+                        <div class="slide-content" style="flex: 1.6; column-count: 1; overflow-y: hidden; font-size: 0.8rem; line-height: 1.4; padding-right: 10px;">
+                            <p><em>"Como hemos visto, nuestro ingenio aprovecha al máximo esta tecnología híbrida. Mientras el PLC se encarga de que las bombas y motores operen de forma segura, el DCS Honeywell realiza la sintonía fina: calcula las 3 ppm de floculante, mantiene el rango de 15 a 18 m3/h de lodos al difusor y realiza los perfiles térmicos exactos desde los 55 °C de las placas hasta los 103 °C del calentador de contacto directo. El resultado de esta automatización es un jugo claro de máxima pureza, listo para convertirse en azúcar rubia de alta calidad."</em></p>
+                            <p><br><strong>Resumen Operativo del Clarificador SRT</strong></p>
+                            <p>El éxito de un clarificador SRT radica en la estabilidad absoluta. El jugo dentro del equipo debe estar térmicamente "muerto" (sin tendencia a hervir ni a enfriarse rápido), condición que solo se logra manteniéndolo a 100°C (+-1°C). A esta temperatura, el flujo es perfectamente hidrodinámico, los macroflóculos caen por gravedad a su máxima velocidad (30 - 50 cm/min) y las pérdidas de sacarosa se mantienen en el mínimo técnico controlable.</p>
                         </div>
-                        <div style="flex: 0.8; display: flex; flex-direction: row; gap: 1rem; justify-content: center; align-items: center; min-height: 0; min-width: 0; overflow: hidden;">
+                        <div style="flex: 0.6; display: flex; flex-direction: column; gap: 1rem; justify-content: center; align-items: center; min-height: 0; min-width: 0; overflow: hidden;">
                             <figure style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; margin: 0; background: #fff; flex: 1; min-width: 0; height: 100%; max-height: 100%;">
                                 <img src="contenido/Diapositiva13- Separación Sólido - Liquido (Lodos).jpeg" style="width: 100%; height: 100%; flex: 1; min-height: 0; min-width: 0; display: block; object-fit: contain;">
-                                <figcaption style="padding: 0.5rem; background: var(--agrolmos-dark-green); color: white; font-size: 0.8rem; font-weight: bold; text-align: center;">Separación Sólido - Liquido (Lodos)</figcaption>
+                                <figcaption style="padding: 0.5rem; background: var(--agrolmos-dark-green); color: white; font-size: 0.8rem; font-weight: bold; text-align: center;">Separación Sólido - Líquido</figcaption>
                             </figure>
                             <figure style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; margin: 0; background: #fff; flex: 1; min-width: 0; height: 100%; max-height: 100%;">
                                 <img src="contenido/Diapositiva13-Jugo Claro Libre de Sólidos..jpeg" style="width: 100%; height: 100%; flex: 1; min-height: 0; min-width: 0; display: block; object-fit: contain;">
@@ -556,48 +512,29 @@
     </div>
                     <div class="slide-header">
                         <div class="slide-number">14</div>
-                        <h2>3. Innovación Tecnológica: Eliminación de Lodos al Difusor</h2>
+                        <h2>8. ¿Qué es Honeywell y la Eliminación de Lodos?</h2>
                     </div>
                     <div style="display: flex; flex-direction: row; gap: 2rem; flex-grow: 1; min-height: 0; width: 100%; margin-bottom: 110px;">
-                        <div class="slide-content" style="flex: 1; column-count: 1; overflow-y: auto;">
-                            <p>En plantas modernas que cuentan con difusor de caña en lugar de tándem de molinos, la</p>
-                            <p>tradicional y costosa sección de filtros de vacío (o filtros de banda) para la cachaza puede</p>
-                            <p>ser eliminada.</p>
-                            <ul>
-                                <li><strong>&bull;</strong> El Proceso: Los lodos pesados del clarificador (cachaza), en lugar de ir a los</li>
-                            </ul>
-                            <p>filtros, se bombean de regreso directamente a la cama de caña dentro del difusor.</p>
-                            <ul>
-                                <li><strong>&bull;</strong> Mecanismo: El colchón de bagazo actúa como un medio filtrante natural masivo.</li>
-                            </ul>
-                            <p>El jugo atrapado en el lodo es lavado por las etapas de lixiviación del difusor,</p>
-                            <p>recuperando el azúcar.</p>
-                            <ul>
-                                <li><strong>&bull;</strong> Ventajas: Eliminación de la inversión en filtros, cero uso de agua de lavado de</li>
-                            </ul>
-                            <p>torta, reducción de pérdidas de pol en cachaza, y ahorro de espacio y</p>
-                            <p>mantenimiento.</p>
-                            <p>¿Qué es la empresa Honeywell?</p>
-                            <p>En el contexto de la automatización industrial —y especialmente en la industria del azúcar</p>
-                            <p>de caña— hablar de Honeywell y su sistema Experion PKS, es hablar de la "columna</p>
-                            <p>vertebral" del control de procesos.</p>
-                            <p>Honeywell es un conglomerado multinacional estadounidense líder global en tecnología</p>
-                            <p>y manufactura avanzada. Aunque opera en sectores como la aeroespacial y edificios</p>
-                            <p>inteligentes, su división Honeywell Process Solutions (HPS) es uno de los titanes</p>
-                            <p>mundiales en la automatización y control de procesos industriales.</p>
-                            <p>¿De qué se encarga? Básicamente, fabrica el software, el hardware  (controladores,</p>
-                            <p>sensores) y los sistemas inteligentes que permiten que una planta industrial opere de</p>
-                            <p>forma automática, segura y eficiente, reduciendo al mínimo el error humano.</p>
+                        <div class="slide-content" style="flex: 1.8; column-count: 1; overflow-y: hidden; font-size: 0.65rem; line-height: 1.15; padding-right: 10px;">
+                            <p style="margin-bottom: 0.3rem;"><strong>¿Qué es la empresa Honeywell?</strong></p>
+                            <p style="margin-bottom: 0.3rem;">En el contexto de la automatización industrial —y especialmente en la industria del azúcar de caña— hablar de Honeywell y su sistema Experion PKS, es hablar de la "columna vertebral" del control de procesos.</p>
+                            <p style="margin-bottom: 0.3rem;">Honeywell es un conglomerado multinacional estadounidense líder global en tecnología y manufactura avanzada. Aunque opera en sectores como la aeroespacial y edificios inteligentes, su división Honeywell Process Solutions (HPS) es uno de los titanes mundiales en la automatización y control de procesos industriales.</p>
+                            <p style="margin-bottom: 0.3rem;">¿De qué se encarga? Básicamente, fabrica el software, el hardware (controladores, sensores) y los sistemas inteligentes que permiten que una planta industrial opere de forma automática, segura y eficiente, reduciendo al mínimo el error humano.</p>
+                            <p style="margin-bottom: 0.3rem;"><br><strong>3. Innovación Tecnológica: Eliminación de Lodos al Difusor</strong></p>
+                            <p style="margin-bottom: 0.3rem;">En plantas modernas que cuentan con difusor de caña en lugar de tándem de molinos, la tradicional y costosa sección de filtros de vacío (o filtros de banda) para la cachaza puede ser eliminada.</p>
+                            <p style="margin-bottom: 0.3rem;"><strong>&bull;</strong> El Proceso: Los lodos pesados del clarificador (cachaza), en lugar de ir a los filtros, se bombean de regreso directamente a la cama de caña dentro del difusor.</p>
+                            <p style="margin-bottom: 0.3rem;"><strong>&bull;</strong> Mecanismo: El colchón de bagazo actúa como un medio filtrante natural masivo. El jugo atrapado en el lodo es lavado por las etapas de lixiviación del difusor, recuperando el azúcar.</p>
+                            <p style="margin-bottom: 0.3rem;"><strong>&bull;</strong> Ventajas: Eliminación de la inversión en filtros, cero uso de agua de lavado de torta, reducción de pérdidas de pol en cachaza, y ahorro de espacio y mantenimiento.</p>
                         </div>
-                        <div style="flex: 0.8; display: flex; flex-direction: row; gap: 1rem; justify-content: center; align-items: center; min-height: 0; min-width: 0; overflow: hidden;">
+                        <div style="flex: 0.6; display: flex; flex-direction: column; gap: 0.5rem; justify-content: center; align-items: center; min-height: 0; min-width: 0; overflow: hidden;">
                             <figure style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; margin: 0; background: #fff; flex: 1; min-width: 0; height: 100%; max-height: 100%;">
-                                <video src="contenido/Diapositiva14-1.mp4" controls style="width: 100%; height: 100%; flex: 1; min-height: 0; min-width: 0; display: block; object-fit: contain; background: #000;"></video>
+                                <video src="contenido/Diapositiva14-1.mp4" controls style="width: 100%; height: 100%; flex: 1; min-height: 0; min-width: 0; display: block; object-fit: cover; background: #000;"></video>
                             </figure>
                             <figure style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; margin: 0; background: #fff; flex: 1; min-width: 0; height: 100%; max-height: 100%;">
-                                <video src="contenido/Diapositva14.mp4" controls style="width: 100%; height: 100%; flex: 1; min-height: 0; min-width: 0; display: block; object-fit: contain; background: #000;"></video>
+                                <video src="contenido/Diapotiva14.mp4" controls style="width: 100%; height: 100%; flex: 1; min-height: 0; min-width: 0; display: block; object-fit: cover; background: #000;"></video>
                             </figure>
                             <figure style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; margin: 0; background: #fff; flex: 1; min-width: 0; height: 100%; max-height: 100%;">
-                                <video src="contenido/Diapostiva14-.mp4" controls style="width: 100%; height: 100%; flex: 1; min-height: 0; min-width: 0; display: block; object-fit: contain; background: #000;"></video>
+                                <video src="contenido/Diapostiva14-.mp4" controls style="width: 100%; height: 100%; flex: 1; min-height: 0; min-width: 0; display: block; object-fit: cover; background: #000;"></video>
                             </figure>
                         </div>
                     </div>
